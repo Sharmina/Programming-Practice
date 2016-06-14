@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MianProgram.java&apos; to &apos;SCC/src/graph&apos;&#x0D;&#x0A;- Original project: &apos;graph&apos;&#x0D;&#x0A;- Destination element: &apos;SCC/src/graph&apos;&#x0D;&#x0A;- Original element: &apos;graph.MianProgram.java&apos;" description="Copy compilation unit" destination="=SCC/src&lt;graph" element1="/src&lt;graph{MianProgram.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1440616348441" units="1" version="1.0"/>
+</session>

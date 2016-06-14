@@ -1,0 +1,37 @@
+package graph;
+
+import java.util.LinkedList;
+
+class Vertex
+{
+	public int index;
+}
+class EdgeList
+{
+	public LinkedList<Integer> edges=new LinkedList<Integer>();
+}
+
+public class Graph {
+
+	Vertex[] v;
+	EdgeList[] e;
+	
+	Graph(int n)
+	{
+		v=new Vertex[n];
+		e=new EdgeList[n];
+		
+		for (int i=0;i<n;i++)
+		{
+			v[i].index=i;
+		}
+	}
+	LinkedList<Integer> getEdgeList(int i)
+	{
+		return e[i].edges;
+	}
+	void addEdge(int i, int j)
+	{
+		e[i].edges.add(j);
+	}
+}
