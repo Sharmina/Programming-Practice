@@ -2,35 +2,35 @@ package Chapter6;
 
 public class Problem3 {
 
-	static String removeDuplicateCharacters(String s) {
+	
 
-		if(s==null)
-	        return null;
-	    if(s.length()==0|| s.length()==1)
-	        return s;
-	    boolean[] charList=new boolean[256];
-	   
-	    StringBuffer sb=new StringBuffer();
-	    
-	    for(int i=0;i<s.length();i++)
-	    {
-	        int character=s.charAt(i)-'0';
-	        
-	        if(!charList[character])
-	        {
-	            charList[character]=true;
-	            char c=(char) (character+'0');
-	            sb.append(c);
-	        }
-	            
-	        
-	    }
-	    return sb.toString();
-
-	}	
+	private static int[] multiply(int[] nums1,int[] nums2)
+	{
+		int[] result=new int[nums1.length+nums2.length];
+		
+		
+		for(int j=nums2.length-1;j>=0;j--)
+		{
+			for(int i=nums1.length-1;i>=0;i--)
+			{
+				result[i+j+1]=result[i+j+1]+nums1[i]*nums2[j];
+				result[i+j]=result[i+j]+result[i+j+1]/10;
+				result[i+j+1]=result[i+j+1]%10;
+			}
+		}
+		
+		return result;
+		
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(removeDuplicateCharacters("helloworld"));
+		int[] nums1={1,2,3,4};
+		int[] nums2={2,1};
+		int[] result=multiply(nums1,nums2);
+		for(int i=0;i<result.length;i++)
+		{
+			System.out.print(result[i]);
+		}
 	}
 
 }
